@@ -1,16 +1,20 @@
-const carouselImages = document.querySelector('.carousel-images')
-const totalImages = document.querySelectorAll('.carousel-images img').length
 let currentIndex = 0
+const images = document.querySelectorAll(".carousel-images img")
+
+function showImage(index) {
+    images.forEach((img, i) => {
+        img.style.display = i === index ? "block" : "none"
+    })
+}
 
 function showNextImage() {
-    currentIndex = (currentIndex + 1) % totalImages
-    carouselImages.style.transform = `translateX(-${currentIndex * 100}%)`
+    currentIndex = (currentIndex + 1) % images.length
+    showImage(currentIndex)
 }
 
 function showPrevImage() {
-    currentIndex = (currentIndex - 1 + totalImages) % totalImages
-    carouselImages.style.transform = `translateX(-${currentIndex * 100}%)`
-
+    currentIndex = (currentIndex - 1 + images.length) % images.length
+    showImage(currentIndex)
 }
 
-setInterval(showNextImage, 9000)
+showImage(currentIndex)
