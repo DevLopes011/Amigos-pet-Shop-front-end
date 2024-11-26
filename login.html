@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/login.css">
+</head>
+
+<body>
+    <br>
+    <br>
+    <div class="cont">
+        <div class="form sign-in">
+            <h2>Bem vindo</h2>
+            <label>
+                <span>Email</span>
+                <input type="email" />
+            </label>
+            <label>
+                <span>Senha</span>
+                <input type="password" />
+            </label>
+            <p class="forgot-pass">Esqueceu sua senha?</p>
+            <button type="button" class="submit">Login</button>
+
+        </div>
+        <div class="sub-cont">
+            <div class="img">
+                <div class="img__text m--up">
+
+                    <h3>Não tem conta? Por favor cadastre-se aqui<h3>
+                </div>
+                <div class="img__text m--in">
+
+                    <h3>Se voce já tem conta, apenas acesse.<h3>
+                </div>
+                <div class="img__btn">
+                    <span class="m--up">Cadastre-se</span>
+                    <span class="m--in">Login</span>
+                </div>
+            </div>
+            <div class="form sign-up">
+                <h2>Crie sua conta</h2>
+                <form id="signUpForm" novalidate>
+                    <label for="name">
+                        <span>Nome</span>
+                        <input type="text" id="name" name="name" required />
+                    </label>
+                    <label for="email">
+                        <span>Email</span>
+                        <input type="email" id="email" name="email" required />
+                    </label>
+                    <label for="password">
+                        <span>Senha</span>
+                        <input type="password" id="password" name="password" required />
+                    </label>
+                    <button type="submit" class="submit">Cadastrar</button>
+                </form>
+            </div>
+            <script src="Handler/userFormHandler.js"></script>
+            <script>
+                document.querySelector('.img__btn').addEventListener('click', function () {
+                    document.querySelector('.cont').classList.toggle('s--signup');
+                });
+            </script>
+</body>
+
+</html>
