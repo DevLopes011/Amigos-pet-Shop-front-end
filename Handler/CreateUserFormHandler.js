@@ -1,7 +1,6 @@
 document.getElementById('signUpForm').addEventListener('submit', async (event) => {
     event.preventDefault()
-    const aws = "https://s78oubk9c0.execute-api.us-east-1.amazonaws.com/user"
-    const local = "http://localhost:3000/user"
+    const awsEndpoint = "https://s78oubk9c0.execute-api.us-east-1.amazonaws.com/user"
   
     const name = document.getElementById('name').value
     const email = document.getElementById('email').value
@@ -14,8 +13,7 @@ document.getElementById('signUpForm').addEventListener('submit', async (event) =
     }
   
     try {
-      // Faz o POST para a API
-      const response = await fetch(aws, {
+      const response = await fetch(awsEndpoint, {
         method: 'post',
         headers: {
           'Content-Type': 'application/json'

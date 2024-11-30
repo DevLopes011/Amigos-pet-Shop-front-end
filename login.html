@@ -12,19 +12,20 @@
     <br>
     <br>
     <div class="cont">
-        <div class="form sign-in">
-            <h2>Bem vindo</h2>
-            <label>
-                <span>Email</span>
-                <input type="email" />
-            </label>
-            <label>
-                <span>Senha</span>
-                <input type="password" />
-            </label>
-            <p class="forgot-pass">Esqueceu sua senha?</p>
-            <button type="button" class="submit">Login</button>
-
+        <div class="formSign-in">
+            <h2>Bem-vindo</h2>
+            <form id="login-form">
+                <label>
+                    <span>Email</span>
+                    <input type="email" id="sign-in-email" name="email" required />
+                </label>
+                <label>
+                    <span>Senha</span>
+                    <input type="password" id="sign-in-password" name="password" required />
+                </label>
+                <p class="forgot-pass">Esqueceu sua senha?</p>
+                <button type="submit" class="submit">Login</button>
+            </form>
         </div>
         <div class="sub-cont">
             <div class="img">
@@ -59,7 +60,8 @@
                     <button type="submit" class="submit">Cadastrar</button>
                 </form>
             </div>
-            <script src="Handler/userFormHandler.js"></script>
+            <script src="Handler/CreateUserFormHandler.js"></script>
+            <script src="Handler/loginUserHandler.js"></script>
             <script>
                 document.querySelector('.img__btn').addEventListener('click', function () {
                     document.querySelector('.cont').classList.toggle('s--signup');
