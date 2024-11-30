@@ -959,6 +959,7 @@ section,
 .gallery .swiper-pagination {
   margin-top: 20px;
   position: relative;
+  
 }
 
 .gallery .swiper-pagination .swiper-pagination-bullet {
@@ -967,6 +968,7 @@ section,
   width: 12px;
   height: 12px;
   opacity: 1;
+  
 }
 
 .gallery .swiper-pagination .swiper-pagination-bullet-active {
@@ -975,6 +977,7 @@ section,
 
 .gallery .swiper-slide-active {
   text-align: center;
+  border-radius: 15px;
 }
 
 @media (min-width: 992px) {
@@ -990,6 +993,7 @@ section,
     transform: scale(1.2);
     border-radius: 25px;
     transition: none;
+    border-radius: 15px;
   }
 }
 
@@ -1021,6 +1025,7 @@ section,
   border: 6px solid var(--background-color);
   position: absolute;
   left: -45px;
+  
 }
 
 .testimonials .testimonial-item h3 {
@@ -1109,6 +1114,7 @@ section,
   .testimonials .testimonial-item .testimonial-img {
     position: static;
     left: auto;
+    
   }
 }
 
